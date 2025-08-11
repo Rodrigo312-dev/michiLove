@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️🐱</title>
+<style>
+    body {
+        margin: 0;
+        background: linear-gradient(#ffe9f3, #fff);
+        font-family: 'Comic Sans MS', cursive;
+        text-align: center;
+        overflow: hidden;
+    }
+    h1 {
+        color: #ff4d6d;
+        margin-top: 30px;
+    }
+    .gato {
+        width: 150px;
+        position: absolute;
+        bottom: 20px;
+        left: -200px;
+        animation: entrar 5s forwards;
+    }
+    @keyframes entrar {
+        to { left: 50%; transform: translateX(-50%); }
+    }
+    .carta {
+        display: none;
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    button {
+        background-color: #ff7ea3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff4d6d;
+    }
+</style>
+</head>
+<body>
+
+<h1>💌 Tengo algo para ti...</h1>
+<img src="https://i.pinimg.com/736x/15/4d/be/154dbebccce93301ba4c5c5ac2c094d9.jpg" class="gato" id="gato">
+
+<div class="carta" id="carta">
+    <h2>My dear Lady 😻</h2>
+    <p>
+        Aunque estemos lejos, siempre estás en mi corazón.  
+        Eres mi gatita favorita y no hay día que no piense en ti ❤️  
+    </p>
+</div>
+
+<audio id="musica" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const gato = document.getElementById('gato');
+    const carta = document.getElementById('carta');
+    const musica = document.getElementById('musica');
+
+    gato.addEventListener('click', () => {
+        carta.style.display = 'block';
+        musica.play();
+    });
+</script>
+
+</body>
+</html>
